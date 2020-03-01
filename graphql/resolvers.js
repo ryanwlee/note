@@ -47,6 +47,15 @@ const resolvers = {
       } catch (err) {
         console.log(err);
       }
+    },
+    deleteNote: async (_, args) => {
+      try {
+        console.log("starting deleteNote mutation");
+        const note = await Note.findByIdAndRemove({ _id: args._id });
+        return note;
+      } catch (err) {
+        console.log(err);
+      }
     }
   }
 };

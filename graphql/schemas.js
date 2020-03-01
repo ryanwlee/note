@@ -15,6 +15,7 @@ export const typeDefs = gql`
 
   type Mutation {
     addNote(title: String!, content: String!): Note!
-    updateNote(_id: ID!, title: String!, content: String!): Note
+    updateNote(_id: ID!, title: String!, content: String!): Note!
+    deleteNote(_id: ID!): Note!
   }
 `;
