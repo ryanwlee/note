@@ -1,6 +1,5 @@
 # TODO
 
-1. update graphql
 1. delete graphql
 1. Create text editor (client)
 1. Create menu drawer

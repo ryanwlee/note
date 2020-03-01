@@ -4,7 +4,8 @@ export const typeDefs = gql`
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
   type Note {
-    title: String
+    _id: ID!
+    title: String!
     content: String
   }
 
@@ -13,6 +14,7 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    addNote(title: String, content: String): Note
+    addNote(title: String!, content: String!): Note!
+    updateNote(_id: ID!, title: String!, content: String!): Note
   }
 `;
