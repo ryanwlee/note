@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 // connect to mongodb
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useUnifiedTopology", true);
+mongoose.set("useFindAndModify", false);
 mongoose.connect(
   `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`,
   function(err) {
@@ -16,7 +17,10 @@ mongoose.connect(
 );
 mongoose.Promise = global.Promise;
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const formatError = err => {
+  return err;
+};
+const server = new ApolloServer({ typeDefs, resolvers, formatError });
 
 // The `listen` method launches a web server.
 server.listen().then(({ url }) => {
