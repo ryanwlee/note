@@ -1,7 +1,17 @@
-# TODO
+## Note, inspired by Mac note
 
-1. Create text editor (client)
-1. Create menu drawer
-1. update functionality
-1. create functionality
-1. delete functionality
+Everybody loves Macbook note app. What if it is web app? Anywhere with any devices?
+
+Check the [DEMO](https://ryanwlee.com/note-client)
+
+![Image](https://github.com/ryanwlee/note-client/blob/master/src/img/note.gif)
+
+## What did I use to build this?
+
+Graphql & Apollo server & MongoDB & React JS & Draft JS.
+
+[server](https://github.com/ryanwlee/note)
+
+## What is next?
+
+Let me know if there is any issue! Love to fix. Also, React Native will be available soon.
