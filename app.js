@@ -31,5 +31,6 @@ const server = new ApolloServer({
 
 // The `listen` method launches a web server.
 server.listen().then(({ url }) => {
+  console.log(process.env.DB_URL);
   console.log(`🚀  Server ready at ${url}`);
 });
