@@ -1,4 +1,4 @@
-import Note from "../models/note";
+const Note = require("../models/note");
 
 const resolvers = {
   Query: {
@@ -57,4 +57,4 @@ const resolvers = {
   },
 };
 
-export default resolvers;
+module.exports = resolvers;

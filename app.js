@@ -1,9 +1,9 @@
 require("dotenv").config();
 
-import { typeDefs } from "./graphql/schemas";
-import resolvers from "./graphql/resolvers";
-import { ApolloServer } from "apollo-server";
-import mongoose from "mongoose";
+const { typeDefs } = require("./graphql/schemas");
+const resolvers = require("./graphql/resolvers");
+const { ApolloServer } = require("apollo-server");
+const mongoose = require("mongoose");
 
 // connect to mongodb
 mongoose.set("useNewUrlParser", true);
