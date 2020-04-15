@@ -2,7 +2,7 @@
 
 Everybody loves Macbook note app. What if it is web app? Anywhere with any devices?
 
-Check the [DEMO](https://ryanwlee.com/note-client)
+Check the [DEMO](https://ryanwlee.com/note)
 
 ![Image](https://github.com/ryanwlee/note-client/blob/master/src/img/note.gif)
 
@@ -10,7 +10,7 @@ Check the [DEMO](https://ryanwlee.com/note-client)
 
 Graphql & Apollo server & MongoDB & React JS & Draft JS.
 
-[server](https://github.com/ryanwlee/note)
+[client](https://github.com/ryanwlee/note-client)
 
 ## What is next?
 
