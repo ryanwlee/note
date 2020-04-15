@@ -10,21 +10,19 @@ const resolvers = {
       } catch (err) {
         console.log(err);
       }
-    }
+    },
   },
   Mutation: {
     addNote: async (_, args) => {
       try {
         console.log("starting addNote mutation");
         const note = await Note.create({
-          title: args.title,
-          content: args.content
+          content: args.content,
         });
-        const { _id, title, content } = note;
+        const { _id, content } = note;
         return {
           _id,
-          title,
-          content
+          content,
         };
       } catch (err) {
         console.log(err);
@@ -35,15 +33,14 @@ const resolvers = {
         console.log("starting updateNote mutation");
         await Note.findByIdAndUpdate(
           {
-            _id: args._id
+            _id: args._id,
           },
           {
-            title: args.title,
-            content: args.content
+            content: args.content,
           }
         );
         const note = await Note.findOne({ _id: args._id });
-        return { _id: note._id, title: note.title, content: note.content };
+        return { _id: note._id, content: note.content };
       } catch (err) {
         console.log(err);
       }
@@ -56,8 +53,8 @@ const resolvers = {
       } catch (err) {
         console.log(err);
       }
-    }
-  }
+    },
+  },
 };
 
 export default resolvers;

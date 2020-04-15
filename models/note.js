@@ -3,14 +3,10 @@ const Schema = mongoose.Schema;
 
 /* create task Schema & model */
 const NoteSchema = new Schema({
-  title: {
-    type: String,
-    required: [true, "title is required"]
-  },
   content: {
     type: String,
-    required: false
-  }
+    required: [true, "content is required"],
+  },
 });
 
 const Note = mongoose.model("note", NoteSchema);

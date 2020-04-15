@@ -5,8 +5,7 @@ export const typeDefs = gql`
 
   type Note {
     _id: ID!
-    title: String!
-    content: String
+    content: String!
   }
 
   type Query {
@@ -14,8 +13,8 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    addNote(title: String!, content: String!): Note!
-    updateNote(_id: ID!, title: String!, content: String!): Note!
+    addNote(content: String!): Note!
+    updateNote(_id: ID!, content: String!): Note!
     deleteNote(_id: ID!): Note!
   }
 `;

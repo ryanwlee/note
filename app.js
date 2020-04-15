@@ -11,16 +11,23 @@ mongoose.set("useUnifiedTopology", true);
 mongoose.set("useFindAndModify", false);
 mongoose.connect(
   `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`,
-  function(err) {
+  function (err) {
     if (err) throw err;
   }
 );
 mongoose.Promise = global.Promise;
 
-const formatError = err => {
+const formatError = (err) => {
   return err;
 };
-const server = new ApolloServer({ typeDefs, resolvers, formatError });
+const server = new ApolloServer({
+  cors: {
+    origin: "*",
+  },
+  typeDefs,
+  resolvers,
+  formatError,
+});
 
 // The `listen` method launches a web server.
 server.listen().then(({ url }) => {
